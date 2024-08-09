@@ -74,8 +74,10 @@ h1 {
   font-size: var(--h1-font-size);
 }
 
-h2 {
+h2, h6 {
   font-size: var(--h2-font-size);
+  font-family: "Shrikhand", serif;
+  font-weight: 900;
 }
 
 h3 {
@@ -97,7 +99,7 @@ h6 {
 p {
   color: var(--p-color);
   font-size: var(--p-font-size);
-  font-weight: var(--font-weight-light);
+  font-weight: var(--font-weight-medium);
 }
 
 ul li {
@@ -506,8 +508,9 @@ strong {
   ABOUT              
 -----------------------------------------*/
 .about-section {
-  background-image: url('../images/edward-unsplash-blur.jpg');
-  background-color: #704010;
+  background-image: url('../images/RTD_About-backg-color.jpg');
+  background-color: black;
+  opacity: 0.9;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
