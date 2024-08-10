@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Festava Live - Ticket HTML Form</title>
+    <title>Rocking The Daisies - Ticket  Form</title>
 
     <!-- CSS FILES -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -43,7 +43,7 @@ https://templatemo.com/tm-583-festava-live
                     <div class="col-lg-12 col-12 d-flex flex-wrap">
                         <p class="d-flex me-4 mb-0">
                             <i class="bi-person custom-icon me-2"></i>
-                            <strong class="text-dark">Welcome to Music Festival 2023</strong>
+                            <strong class="text-dark">Welcome to Rocking The Daisies 2024</strong>
                         </p>
                     </div>
 
@@ -55,7 +55,7 @@ https://templatemo.com/tm-583-festava-live
         <nav class="navbar navbar-expand-lg">
             <div class="container">
                 <a class="navbar-brand" href="index.html">
-                    Festava Live
+                    Rocking The Daisies
                 </a>
 
                 <a href="ticket.html" class="btn custom-btn d-lg-none ms-auto me-4">Buy Ticket</a>
@@ -106,7 +106,8 @@ https://templatemo.com/tm-583-festava-live
 
                     <div class="col-lg-6 col-10 mx-auto">
                         <form class="custom-form ticket-form mb-5 mb-lg-0" action="#" method="post" role="form">
-                            <h2 class="text-center mb-4">Get started here</h2>
+                            <h2 class="text-center mb-4">Cards Accepted</h2>
+                            <img src="images/cardaccepted.jpg" width="450" height="200">
 
                             <div class="ticket-form-body">
                                 <div class="row">
@@ -152,11 +153,34 @@ https://templatemo.com/tm-583-festava-live
                                 <input type="number" name="ticket-form-number" id="ticket-form-number"
                                     class="form-control" placeholder="Number of Tickets" required>
 
+                                  <!-- Card Payment Details -->
+                                <div class="row">
+                                    <h6>Payment Details</h6>
+                                    <div class="col-lg-6 col-md-6 col-12">
+                                        <label for="card-number">Card Number</label>
+                                        <input type="text" name="card-number" id="card-number"
+                                            class="form-control" placeholder="1234 1234 1234 1234" maxlength="16">
+                                    </div>
+                                       
+                                    <!-- Expiration date -->
+                                    <div class="col-lg-6 col-md-6 col-12">
+                                        <label for="expiration">Expiry Date</label>
+                                        <input type="tel" name="card_expiry" id="expirationInput"
+                                            pattern="/{4}/" class="form-control" placeholder="MM/YY"  maxlength="4"
+                                            required>
+                                    </div>
+
+                                    <!-- CVC -->
+                                    <input type="tel" name="cvv" id="cvv-input"
+                                    class="form-control" placeholder="..." maxlength="3" required>
+                                </div>    
+
+                                 <!-- Any Additional Request -->
                                 <textarea name="ticket-form-message" rows="3" class="form-control"
                                     id="ticket-form-message" placeholder="Additional Request"></textarea>
 
                                 <div class="col-lg-4 col-md-10 col-8 mx-auto">
-                                    <button type="submit" class="form-control">Buy Ticket</button>
+                                    <button type="submit" class="form-control" onclick="confirmButton()">Buy Ticket</button>
                                 </div>
                             </div>
                         </form>
