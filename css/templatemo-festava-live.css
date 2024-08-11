@@ -561,7 +561,11 @@ strong {
   position: relative;
   padding-top: 130px;
 }
-
+/*Image responsiveness  */
+.card-accepted {
+  width: 50%;
+  height: auto;
+}
 .ticket-form {
   background: var(--white-color);
   border-radius: var(--border-radius-medium);
