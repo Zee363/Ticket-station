@@ -610,8 +610,9 @@ strong {
 }
 
 .card_number:focus {
-  border: 1px solid rgb(125, 205, 231);
+  border: 1px solid rgb(82, 170, 252);
 }
+
 /* Card Number Border End */
 .ticket-form {
   background: var(--white-color);
