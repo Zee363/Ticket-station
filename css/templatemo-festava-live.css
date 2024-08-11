@@ -276,7 +276,11 @@ strong {
 .nav-tabs .nav-link:hover h5 {
   color: var(--primary-color);
 }
-
+.Welcome {
+  font-size: 20px;
+  color: white;
+  margin: 10px;
+}
 /*---------------------------------------
   CUSTOM ICON COLOR               
 -----------------------------------------*/
@@ -553,18 +557,60 @@ strong {
   position: relative;
   padding-top: 130px;
 }
+/* Payment Header */
+.Payment_header {
+  text-align: center;
+}
+
 /*Image responsiveness  */
 .card-accepted {
   width: 50%;
   height: auto;
 }
 
+/* Name */
+#full-name {
+  color: #000000;
+}
+/* Email */
+#ticket-form-email {
+  color: #000000;
+}
+
+/* Card Number */
+#card-number {
+  color: #000000;
+}
+
+/* Expiry Date */
+#expiration {
+  color: #000000;
+}
+
+/* CVV */
+#cvv {
+  color: #000000;
+}
 /* Radio Ticket Types */
 .row-group {
   display: flex;
   flex-direction: row;
   gap: 12px;
 }
+
+/* Card Number Border */
+.card_number {
+  padding: 15px;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  margin: 10px 0px;
+  outline: none;
+}
+
+.card_number:focus {
+  border: 1px solid rgb(125, 205, 231);
+}
+/* Card Number Border End */
 .ticket-form {
   background: var(--white-color);
   border-radius: var(--border-radius-medium);
@@ -803,20 +849,21 @@ strong {
 }
 
 .custom-form button[type="submit"] {
-  background: var(--custom-btn-bg-color);
+  background: yellow;
   border: none;
   border-radius: var(--border-radius-large);
   color: var(--white-color);
-  font-size: var(--p-font-size);
-  font-weight: var(--font-weight-medium);
+  font-size: 20px;
+  font-weight:bolder;
   transition: all 0.3s;
   margin-bottom: 0;
 }
 
 .custom-form button[type="submit"]:hover,
 .custom-form button[type="submit"]:focus {
-  background: var(--custom-btn-bg-hover-color);
+  background: yellow;
   border-color: transparent;
+  color:black;
 }
 
 /*---------------------------------------
