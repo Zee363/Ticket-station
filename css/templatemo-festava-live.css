@@ -566,6 +566,8 @@ strong {
 .card-accepted {
   width: 50%;
   height: auto;
+  display: block;
+  margin: 20px auto;
 }
 
 /* Name */
@@ -635,6 +637,9 @@ strong {
   height: 100%;
 }
 
+.verify-info {
+  text-align: center;
+}
 /*---------------------------------------
   ARTISTS              
 -----------------------------------------*/
