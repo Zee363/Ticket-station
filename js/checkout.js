@@ -1,19 +1,23 @@
 const form = document.querySelector("form");
 const inputs = document.querySelectorAll("input");
 const submitButton = document.querySelector("button[type='submit']");
+const iconInputsContainer = document.querySelectorAll(
+  "div.icon-group-container"
+);
 
-// Query Selectors
+// Query Selectors for IDs
 const cardNumberInput = document.querySelector("#card-number");
-const expirationDateInput = document.querySelector("#expirationInput");
-const CVVInput = document.querySelector("#cvv-input");
+const expirationDateInput = document.querySelector("#expiration");
+const CVVInput = document.querySelector("#cvv");
 const cardImgElement = document.querySelector("#card-icon");
 
-// For card to change on the side
-const visaIcon = "images/visacard.jpg";
-const mastercardIcon = "images/mastercard.jpg";
-const defaultCardIcon = "images/credit-card.png";
+// Line 14-35 is for when you fill in the card number it shows what type of a card it is e.g visa card
+const visaIcon = "images/visa.svg";
+const mastercardIcon = "images/mastercard.svg";
+const defaultCardIcon = "images/credit-card.jpg";
 
-const cleaveCC = new Stick(cardNumberInput, {
+// In line 20 We created a new Object Cleave that if the credit card is true then switch image credit card to Any another card based on the number.
+const cleaveCC = new Cleave(cardNumberInput, {
   creditCard: true,
   delimiter: " ",
   onCreditCardTypeChanged: function (type) {
@@ -30,26 +34,33 @@ const cleaveCC = new Stick(cardNumberInput, {
     }
   },
 });
-
-// Expiration Date
-const cleaveExpiration = new Stick(expirationDateInput, {
+// line 37-41 Exxpiration Date, using same object Cleave and dataPatten to include "/"
+const cleaveExpiration = new Cleave(expirationDateInput, {
   date: true,
   datePattern: ["m", "y"],
 });
 
-// Expiration Date
-
+//onCreditCardTypeChanged End
+// line 43-47 CVV we created a new object cling and only allows  3 numbers
 const cleaveCVV = new Cling(CVVInput, {
   numeralPositiveOnly: true,
   blocks: [3],
 });
 
+// Buttons
+// Send Message
+function sendMesssageButton() {
+  alert("Message sent.We will get back to you 😊");
+}
+
 // Confirm Buttton
-function confirmButton() {
+function confirmButton(input) {
   let sure = prompt("Are you sure?");
   if (sure === "yes") {
-    alert("Successful Payment");
+    alert("Successful Payment🥳🤩");
   } else {
-    alert("Cancelled");
+    alert("Cancelled😞");
   }
 }
+
+// Buttons End
