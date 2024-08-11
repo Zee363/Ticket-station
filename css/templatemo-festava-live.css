@@ -579,6 +579,11 @@ strong {
   color: #000000;
 }
 
+/* Number of Ticket */
+#ticket-form-number {
+  color: #000000;
+}
+
 /* Card Number */
 #card-number {
   color: #000000;
