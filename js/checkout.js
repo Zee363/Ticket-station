@@ -20,7 +20,7 @@ const defaultCardIcon = "images/credit-card.jpg";
 const cleaveCC = new Cleave(cardNumberInput, {
   creditCard: true,
   delimiter: " ",
-  blocks: [4, 4, 4, 2],
+  blocks: [4, 4, 4, 4],
   onCreditCardTypeChanged: function (type) {
     switch (type) {
       case "visa":
