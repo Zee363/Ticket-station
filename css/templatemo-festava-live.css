@@ -877,6 +877,10 @@ strong {
   color:black;
 }
 
+/* Input Message color */
+#contact-message {
+  color: #000000;
+}
 /*---------------------------------------
   SITE FOOTER              
 -----------------------------------------*/
